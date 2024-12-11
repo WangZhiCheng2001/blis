@@ -51,7 +51,7 @@ build_script:
 - set "PATH=%PATH%;C:\blis\lib"
 - set "CFLAGS=-Wno-macro-redefined"
 - bash -lc "cd /c/projects/blis && ./configure %CONFIGURE_OPTS% --enable-threading=%THREADING% --enable-arg-max-hack --prefix=/c/blis %CONFIG%"
-- bash -lc "cd /c/projects/blis && mingw32-make -j4 V=1"
+- bash -lc "cd /c/projects/blis && mingw32-make -j20 V=1"
 - bash -lc "cd /c/projects/blis && mingw32-make install"
 - 7z a C:\blis.zip C:\blis
 - ps: Push-AppveyorArtifact C:\blis.zip
