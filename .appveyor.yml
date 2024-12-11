@@ -39,7 +39,7 @@ install:
 - if [%CC%]==[clang] set "PATH=C:\Program Files\LLVM\bin;%PATH%"
 - if [%CC%]==[clang] set "AR=llvm-ar"
 - if [%CC%]==[clang] set "AS=llvm-as"
-- if [%CC%]==[clang] call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x64 8.1 -vcvars_ver="14.38"
+- if [%CC%]==[clang] call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64 8.1 -vcvars_ver="14.40"
 
 build_script:
 - if [%LIB_TYPE%]==[shared] set "CONFIGURE_OPTS=%CONFIGURE_OPTS% --enable-shared --disable-static"
