@@ -3,22 +3,22 @@ skip_branch_with_pr: true
 environment:
   matrix:
     - LIB_TYPE: static
-      CONFIG: x86_64
+      CONFIG: --enable-debug x86_64
       CC: clang
       THREADING: openmp
 
     - LIB_TYPE: shared
-      CONFIG: x86_64
+      CONFIG: --enable-debug x86_64
       CC: clang
       THREADING: openmp
 
     - LIB_TYPE: static
-      CONFIG: x86_64 --enable-debug
+      CONFIG: x86_64
       CC: clang
       THREADING: openmp
 
     - LIB_TYPE: shared
-      CONFIG: x86_64 --enable-debug
+      CONFIG: x86_64
       CC: clang
       THREADING: openmp
 
